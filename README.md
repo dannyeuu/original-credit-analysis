@@ -3,7 +3,7 @@
 ## Participants
 - Abelardo Fukasawa
 - Mariana Gomes
-- Gabriel Casarim
+- Gabriel Casarin
 - Daniel Lopes
 
 ## Project

@@ -9,6 +9,9 @@ class User(db.Model):
     name = db.Column(db.String(80), unique=False)
     email = db.Column(db.String(120), unique=True)
     password = db.Column(db.String(120), unique=False)
+    is_active = db.Column(db.Boolean, unique=False)
+    token = db.Column(db.String(120), unique=False)
+    expire = db.Column(db.TIMESTAMP, unique=False)
 
     def __init__(self, name, password, email):
         self.name = name
@@ -22,6 +25,7 @@ class Integration(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     provider_name = db.Column(db.String(80), unique=False)
     access_token = db.Column(db.String, unique=True)
+    client_id = db.Column(db.String, unique=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'),
         nullable=False)
 
