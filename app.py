@@ -6,9 +6,13 @@ import json
 import requests
 from flask import Flask, request, Response
 from flask import send_from_directory
+from flask_bcrypt import Bcrypt
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
+db = SQLAlchemy(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 
 
