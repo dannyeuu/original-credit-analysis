@@ -4,7 +4,7 @@
 import os
 import json
 import requests
-from flask import Flask, request
+from flask import Flask, request, Response
 from flask import send_from_directory
 
 
@@ -19,8 +19,16 @@ def favicon():
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    response = app.response_class(
+            response=json.dumps({'status_code': 200}),
+            status=200,
+            mimetype='application/json'
+        )
+    return response
 
+@app.route('/import/original/invoices', methods=['GET'])
+def import_original_invoices():
+	pass
 
 if __name__ == '__main__':
     app.run()
