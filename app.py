@@ -12,12 +12,14 @@ from flask_login import LoginManager
 
 
 app = Flask(__name__)
-bcrypt = Bcrypt(app)
-db = SQLAlchemy(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+
+bcrypt = Bcrypt(app)
+db = SQLAlchemy(app)
+# login_manager = LoginManager()
+# login_manager.init_app(app)
+login_manager = LoginManager(app)
 
 
 @app.route('/favicon.ico')
