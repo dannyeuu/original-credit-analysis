@@ -1,0 +1,10 @@
+# Banco Original Open Banking Hackathon
+
+## Participants
+- Abelardo Fukasawa
+- Mariana Gomes
+- Gabriel Casarim
+- Daniel Lopes
+
+## Project
+Credit Analysis of Credit Card by Artificial Intelligence
