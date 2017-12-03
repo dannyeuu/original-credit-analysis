@@ -14,7 +14,7 @@ class Config(object):
     SECRET_KEY = b'\xcagC\xac\x0e]lTY2\xd2\x9fS\xa2[#\xcfA\x0c6\x9c|\xcbs\\\xb6\xd3\xa1Q/\x8b\xd1F\x8f.se\xee\x91!\xfd\xb3\xa7\xe79\xb4\x0e\xc9'
     
     # Database
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///db/test.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///db/database.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # Original Integration
