@@ -8,6 +8,7 @@ from flask import Flask, request, Response
 from flask import send_from_directory
 from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 
 app = Flask(__name__)
@@ -15,11 +16,16 @@ bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 
+login_manager = LoginManager()
+login_manager.init_app(app)
+
 
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
 
 @app.route('/')
 def hello():
