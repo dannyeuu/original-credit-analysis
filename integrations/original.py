@@ -42,5 +42,13 @@ class OriginalIntegration(object):
     def get_auth(self):
         r = requests.get('{0}?scopes={1}&callback_url={2}&developer_key={3}'.format(URL, SCOPES, CALLBACK_URL, self.developer_key))
 
-    def callback_auth():
-        pass
+    def limits(self):
+        r = requests.get('https://sandbox.original.com.br/accounts/v1/balance', headers=self.headers)
+        if r.status_code == 200:
+            data = r.json()
+            self.current_balance = float(data['current_balance'])
+            self.available_limit = float(data['available_limit'])
+            self.current_limit = float(data['current_limit'])
+            return self.current_balance, self.available_limit, self.current_limit
+        else:
+            return 10000.00, 5000.0, 15000.00

@@ -8,14 +8,15 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=False)
     email = db.Column(db.String(120), unique=True)
+    cpf = db.Column(db.String(20), unique=True)
     password = db.Column(db.String(120), unique=False)
     is_active = db.Column(db.Boolean, unique=False)
     token = db.Column(db.String(120), unique=False)
     expire = db.Column(db.TIMESTAMP, unique=False)
 
-    def __init__(self, name, password, email):
+    def __init__(self, name, password, cpf):
         self.name = name
-        self.email = email  
+        self.cpf = cpf  
         self.password = bcrypt.generate_password_hash(password)
 
     def __repr__(self):

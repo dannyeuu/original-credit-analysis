@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Merlin HTML/CSS template">
+  <meta name="author" content="Hasan Alibegic">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Merlin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" async defer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    async defer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.css" async defer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" async defer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async defer>
+  <link rel="stylesheet" href="{{ url_for('static', filename='ccss/style.css') }}" async defer>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loading"></div>
+  </div>
+
+  <div id="navbar-top">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-white" role="navigation">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <a class="navbar-brand nav-external" href="#home">Olá Jhon Doe<br> Conta: 111111</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="consultaCredito.html">VOLTAR</a>
+              <a class="nav-link" href="#home">Banco</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section id="services" class="page">
+    <div class="container">
+      <div class="content text-center">
+        <div class="heading">
+          <h5 class="mt-0 mb-4">Crédito Atual</h5>
+          <div class="border">{{ available_limit }}</div>
+          <br>
+          <h5 class="mt-0 mb-0 animated hiding" data-animation="fadeIn" data-delay="400">{{ current_limit }}</h5>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="page">
+    <div class="container">
+      <div class="content text-center">
+        <div class="heading">
+          <h5 class="mt-0 mb-4">Sugestões:</h5>
+          <div class="border"></div>
+          <br>
+          <h5 class="mt-0 mb-0 animated hiding" data-animation="fadeIn" data-delay="400">R$ xx.xxx.xx</h5>
+        </div>
+        <br>
+        <div class="heading">
+            <h5 class="mt-0 mb-4">Crédito Simulado</h5>
+            <div class="border"></div>
+            <br>
+            <h5 class="mt-0 mb-0 animated hiding" data-animation="fadeIn" data-delay="400">R$ xx.xxx.xx</h5>
+          </div>       
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12 animated hiding" data-animation="fadeInUp">
+                  <ul class="social list-inline">
+                      <li class="list-inline-item">
+                          <a class="facebook" href="file:///C:/Users/mariana.gomes/Desktop/Original/consultaCredito.html" title="Facebook">
+                              <i class="fa fa-home fa-3x"></i>
+                          </a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a class="twitter" href="#" title="Twitter">
+                              <i class="fa fa-money fa-3x"></i>
+                          </a>
+                      </li>
+
+                      <li class="list-inline-item">
+                          <a class="google-plus" href="/logout" title="Google+">
+                              <i class="fa fa-sign-out fa-3x"></i>
+                          </a>
+
+                      </li>
+                  </ul>
+
+              </div>
+          </div>
+      </div>
+  </footer>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js')+'?v=1.0' }}"></script>
+
+</body>
+
+</html>
